@@ -254,6 +254,8 @@
     <p><em>Esta Política de Privacidade aplica-se ao aplicativo One Tap Dodge no Android e iOS.</em></p>
   </div>
 
+  <p style="margin-top: 2rem;"><a href="https://leonardogbr.github.io/support/onetapdodge/" id="support-link">Support & FAQ</a></p>
+
   <script>
     var SUPPORTED_LANGS = ['en', 'es', 'pt'];
     var DEFAULT_LANG = 'en';
@@ -263,6 +265,9 @@
       var lang = params.get('lang');
       return lang && SUPPORTED_LANGS.includes(lang) ? lang : DEFAULT_LANG;
     }
+
+    var SUPPORT_LINK_BASE = 'https://leonardogbr.github.io/support/onetapdodge/';
+    var SUPPORT_LINK_TEXT = { en: 'Support & FAQ', es: 'Soporte y FAQ', pt: 'Suporte e FAQ' };
 
     function showLang(lang) {
       if (!SUPPORTED_LANGS.includes(lang)) return;
@@ -276,6 +281,11 @@
       var url = new URL(window.location.href);
       url.searchParams.set('lang', lang);
       window.history.replaceState({}, '', url.toString());
+      var supportLink = document.getElementById('support-link');
+      if (supportLink) {
+        supportLink.href = SUPPORT_LINK_BASE + '?lang=' + lang;
+        supportLink.textContent = SUPPORT_LINK_TEXT[lang] || SUPPORT_LINK_TEXT.en;
+      }
     }
 
     (function init() {
