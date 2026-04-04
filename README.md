@@ -22,6 +22,10 @@ Exemplos:
 - `https://[USUARIO].github.io/privacy-policies/zentictactoe/?lang=fr`
 - `https://[USUARIO].github.io/privacy-policies/?lang=pt`
 
+## Tema claro / escuro
+
+O comportamento segue o repositório **support** (`../support`): mesma chave `localStorage` **`support-theme`** (`dark` | `light`), script no `<head>` que aplica `data-theme` antes do primeiro paint, botão fixo com ícones SVG (lua / sol), `color-scheme` e margens com `env(safe-area-inset-*)`. Assim, no mesmo domínio GitHub Pages, alternar o tema em **Support** ou **Privacy** fica sincronizado.
+
 ## Adicionar um novo app
 
 1. Crie a pasta `[nome-do-app]/` (ex.: `meu-app/`)

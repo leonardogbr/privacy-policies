@@ -4,13 +4,32 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Privacy Policies - LLabs Corp</title>
+  <script>
+    (function () {
+      var k = 'support-theme';
+      var s = localStorage.getItem(k);
+      var t = (s === 'dark' || s === 'light') ? s : (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
   <style>
-    :root {
+    html[data-theme="dark"] {
+      color-scheme: dark;
       --bg: #0f1419;
       --text: #e6edf3;
       --muted: #8b949e;
       --accent: #58a6ff;
       --border: #30363d;
+      --surface-raised: #21262d;
+    }
+    html[data-theme="light"] {
+      color-scheme: light;
+      --bg: #ffffff;
+      --text: #1f2328;
+      --muted: #656d76;
+      --accent: #0969da;
+      --border: #d0d7de;
+      --surface-raised: #f6f8fa;
     }
     * { box-sizing: border-box; }
     body {
@@ -20,10 +39,25 @@
       background: var(--bg);
       margin: 0;
       padding: 2rem 1.5rem;
+      padding-top: max(2rem, env(safe-area-inset-top, 0px));
+      padding-right: max(calc(1.5rem + 2.75rem + env(safe-area-inset-right, 0px)), 1.5rem);
       max-width: 480px;
       margin-inline: auto;
     }
     h1 { font-size: 1.5rem; margin-top: 0; }
+    .lang-tabs { margin-bottom: 1.5rem; flex-wrap: wrap; display: flex; gap: 0.5rem; }
+    .lang-tabs button {
+      background: var(--border);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      border-radius: 6px;
+      margin-right: 0.5rem;
+    }
+    .lang-tabs button.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+    .lang-content { display: none; }
+    .lang-content.active { display: block; }
     .app-list { list-style: none; padding: 0; margin: 1.5rem 0; }
     .app-list li { margin-bottom: 0.75rem; }
     .app-list a {
@@ -35,52 +69,110 @@
       border-radius: 8px;
       font-weight: 500;
     }
-    .app-list a:hover { background: #21262d; text-decoration: underline; }
+    html[data-theme="dark"] .app-list a:hover { background: var(--surface-raised); text-decoration: underline; }
+    html[data-theme="light"] .app-list a { background: var(--surface-raised); }
+    html[data-theme="light"] .app-list a:hover { background: #eaeef2; text-decoration: underline; }
     p { color: var(--muted); font-size: 0.95rem; }
-    @media (prefers-color-scheme: light) {
-      :root {
-        --bg: #ffffff;
-        --text: #1f2328;
-        --muted: #656d76;
-        --accent: #0969da;
-        --border: #d0d7de;
-      }
-      .app-list a { background: #f6f8fa; }
-      .app-list a:hover { background: #eaeef2; }
+    .theme-toggle {
+      position: fixed;
+      top: max(1rem, env(safe-area-inset-top, 0px));
+      right: max(1rem, env(safe-area-inset-right, 0px));
+      z-index: 100;
+      width: 2.5rem;
+      height: 2.5rem;
+      padding: 0;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: var(--bg);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+      color: var(--text);
+      cursor: pointer;
+      display: grid;
+      place-items: center;
     }
+    html[data-theme="dark"] .theme-toggle {
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
+    }
+    .theme-toggle:hover { opacity: 0.92; }
+    .theme-toggle svg { width: 1.15rem; height: 1.15rem; }
+    .theme-toggle .icon-sun { display: none; }
+    html[data-theme="light"] .theme-toggle .icon-moon { display: none; }
+    html[data-theme="light"] .theme-toggle .icon-sun { display: block; }
   </style>
 </head>
 <body>
-  <h1 id="title">Privacy Policies</h1>
-  <p id="subtitle">Select an app to view its privacy policy.</p>
-  <ul class="app-list">
-    <li><a href="./onetapdodge/" id="link-onetapdodge">One Tap Dodge</a></li>
-    <li><a href="./zentictactoe/">Zen Tic-Tac-Toe</a></li>
-  </ul>
+  <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle dark or light theme" title="Dark / light mode">
+    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+  </button>
+  <div class="lang-tabs">
+    <button id="btn-en" class="active" onclick="showLang('en')">English</button>
+    <button id="btn-es" onclick="showLang('es')">Español</button>
+    <button id="btn-pt" onclick="showLang('pt')">Português</button>
+    <button id="btn-fr" onclick="showLang('fr')">Français</button>
+  </div>
+
+  <div id="content-en" class="lang-content active">
+    <h1>Privacy Policies</h1>
+    <p>Select an app to view its privacy policy.</p>
+    <ul class="app-list">
+      <li><a href="./onetapdodge/?lang=en">One Tap Dodge</a></li>
+      <li><a href="./zentictactoe/?lang=en">Zen Tic-Tac-Toe</a></li>
+    </ul>
+  </div>
+
+  <div id="content-es" class="lang-content">
+    <h1>Políticas de Privacidad</h1>
+    <p>Selecciona una aplicación para ver su política de privacidad.</p>
+    <ul class="app-list">
+      <li><a href="./onetapdodge/?lang=es">One Tap Dodge</a></li>
+      <li><a href="./zentictactoe/?lang=es">Zen Tic-Tac-Toe</a></li>
+    </ul>
+  </div>
+
+  <div id="content-pt" class="lang-content">
+    <h1>Políticas de Privacidade</h1>
+    <p>Selecione um aplicativo para ver sua política de privacidade.</p>
+    <ul class="app-list">
+      <li><a href="./onetapdodge/?lang=pt">One Tap Dodge</a></li>
+      <li><a href="./zentictactoe/?lang=pt">Zen Tic-Tac-Toe</a></li>
+    </ul>
+  </div>
+
+  <div id="content-fr" class="lang-content">
+    <h1>Politiques de confidentialité</h1>
+    <p>Sélectionnez une application pour consulter sa politique de confidentialité.</p>
+    <ul class="app-list">
+      <li><a href="./onetapdodge/?lang=fr">One Tap Dodge</a></li>
+      <li><a href="./zentictactoe/?lang=fr">Zen Tic-Tac-Toe</a></li>
+    </ul>
+  </div>
+
   <script>
-    (function () {
-      var params = new URLSearchParams(window.location.search);
+    var HTML_LANG = { en: 'en', es: 'es', pt: 'pt', fr: 'fr' };
+
+    function showLang(lang) {
+      document.querySelectorAll('.lang-content').forEach(function (el) { el.classList.remove('active'); });
+      document.querySelectorAll('.lang-tabs button').forEach(function (btn) { btn.classList.remove('active'); });
+      document.getElementById('content-' + lang).classList.add('active');
+      document.getElementById('btn-' + lang).classList.add('active');
+      document.documentElement.lang = HTML_LANG[lang] || 'en';
+      var url = new URL(window.location.href);
+      url.searchParams.set('lang', lang);
+      window.history.replaceState({}, '', url.toString());
+    }
+
+    (function init() {
+      var params = new URLSearchParams(location.search);
       var lang = (params.get('lang') || '').toLowerCase();
-      var supported = ['en', 'es', 'fr', 'pt'];
-      if (lang && supported.includes(lang)) {
-        document.querySelectorAll('.app-list a').forEach(function (a) {
-          var href = a.getAttribute('href');
-          a.href = href + (href.indexOf('?') >= 0 ? '&' : '?') + 'lang=' + lang;
-        });
-        var i18n = {
-          en: { title: 'Privacy Policies', subtitle: 'Select an app to view its privacy policy.' },
-          es: { title: 'Políticas de Privacidad', subtitle: 'Selecciona una aplicación para ver su política de privacidad.' },
-          fr: { title: 'Politiques de confidentialité', subtitle: 'Sélectionnez une application pour consulter sa politique de confidentialité.' },
-          pt: { title: 'Políticas de Privacidade', subtitle: 'Selecione um aplicativo para ver sua política de privacidade.' }
-        };
-        var t = i18n[lang];
-        if (t) {
-          var el = document.getElementById('title'); if (el) el.textContent = t.title;
-          el = document.getElementById('subtitle'); if (el) el.textContent = t.subtitle;
-        }
-        document.documentElement.lang = lang;
-      }
+      if (lang && ['en', 'es', 'pt', 'fr'].includes(lang)) showLang(lang);
     })();
+
+    document.getElementById('theme-toggle').addEventListener('click', function () {
+      var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      localStorage.setItem('support-theme', next);
+      document.documentElement.setAttribute('data-theme', next);
+    });
   </script>
 </body>
 </html>
