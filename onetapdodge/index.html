@@ -29,7 +29,7 @@
     p, li { color: var(--muted); }
     a { color: var(--accent); text-decoration: none; }
     a:hover { text-decoration: underline; }
-    .lang-tabs { margin-bottom: 1.5rem; }
+    .lang-tabs { margin-bottom: 1.5rem; flex-wrap: wrap; display: flex; gap: 0.5rem; }
     .lang-tabs button {
       background: var(--border);
       border: 1px solid var(--border);
@@ -37,7 +37,6 @@
       padding: 0.5rem 1rem;
       cursor: pointer;
       border-radius: 6px;
-      margin-right: 0.5rem;
     }
     .lang-tabs button.active { background: var(--accent); color: #fff; border-color: var(--accent); }
     .lang-content { display: none; }
@@ -62,6 +61,7 @@
   <div class="lang-tabs">
     <button id="btn-en" class="active" onclick="showLang('en')">English</button>
     <button id="btn-es" onclick="showLang('es')">Español</button>
+    <button id="btn-fr" onclick="showLang('fr')">Français</button>
     <button id="btn-pt" onclick="showLang('pt')">Português</button>
   </div>
 
@@ -191,6 +191,69 @@
     <p><em>Esta Política de Privacidad aplica a la aplicación One Tap Dodge en Android e iOS.</em></p>
   </div>
 
+  <div id="content-fr" class="lang-content">
+    <h1>Politique de confidentialité – One Tap Dodge</h1>
+    <p class="meta"><strong>Dernière mise à jour :</strong> 23 février 2026</p>
+
+    <h2>Introduction</h2>
+    <p>LLabs Corp (« nous », « notre » ou « nos ») exploite l’application mobile One Tap Dodge (l’« App »). La présente politique de confidentialité explique comment nous collectons, utilisons et protégeons les informations lorsque vous utilisez notre App, notamment dans le cadre de la politique Familles de Google Play et des exigences en matière de protection de la vie privée des enfants.</p>
+    <p>Notre App est conçue pour convenir à tous les âges, y compris aux enfants de moins de 13 ans. Nous nous engageons à protéger la vie privée de tous les utilisateurs, en particulier des enfants, conformément au Children's Online Privacy Protection Act (COPPA) des États-Unis, au Règlement général sur la protection des données (RGPD) de l’UE et à la politique Familles de Google Play.</p>
+
+    <h2>Informations que nous collectons</h2>
+
+    <h3>Données stockées localement sur votre appareil</h3>
+    <p>L’App stocke les données suivantes <strong>uniquement sur votre appareil</strong> (via AsyncStorage). Ces données ne sont jamais envoyées à nos serveurs ni à des tiers :</p>
+    <ul>
+      <li><strong>Progression de jeu :</strong> Meilleur score, dernier score, pièces, skins débloquées, skin équipée, progression des défis, trophées et statistiques de jeu associées</li>
+      <li><strong>Préférences :</strong> Son, musique, retours haptiques, thème (sombre/clair/système) et langue</li>
+    </ul>
+    <p>Ces données locales servent uniquement à fournir l’expérience de jeu et à mémoriser vos réglages. Nous n’y avons pas accès.</p>
+
+    <h3>Données collectées par des tiers (publicité)</h3>
+    <p>Notre App affiche des publicités via <strong>Google AdMob</strong>. Lorsque des annonces sont diffusées :</p>
+    <ul>
+      <li><strong>Google AdMob</strong> peut collecter certaines données techniques (type d’appareil, version du système, interactions avec les annonces) pour diffuser et mesurer les annonces. Pour les applications destinées aux enfants, nous configurons AdMob pour : ne pas utiliser la publicité basée sur les centres d’intérêt ni le remarketing ; ne pas transmettre l’identifiant publicitaire Android (AAID) pour les requêtes publicitaires orientées enfants ; n’afficher que des annonces adaptées à l’âge (classification G – Grand public).</li>
+      <li>La <a href="https://policies.google.com/privacy?hl=fr" target="_blank" rel="noopener">politique de confidentialité de Google</a> et la page <a href="https://support.google.com/admob/answer/6223431" target="_blank" rel="noopener">AdMob – Traitement orienté vers les enfants</a> décrivent les pratiques d’AdMob.</li>
+    </ul>
+    <p>Nous ne contrôlons pas les données qu’AdMob collecte. Nous vous invitons à consulter les politiques de Google.</p>
+
+    <h3>Données que nous ne collectons pas</h3>
+    <p>Nous ne collectons <strong>pas</strong> : les informations d’identification personnelle (nom, e-mail, téléphone) ; les identifiants de compte (l’App n’a pas de compte utilisateur ni de connexion) ; les données de localisation ; les contacts, photos ou autres fichiers personnels ; toute donnée permettant d’identifier directement un enfant.</p>
+
+    <h2>Vie privée des enfants (conformité COPPA)</h2>
+    <p>Notre App s’adresse au grand public, y compris aux enfants de moins de 13 ans. La protection des enfants est une priorité :</p>
+    <ol>
+      <li><strong>Pas de données personnelles d’enfants :</strong> Nous ne collectons pas sciemment d’informations personnelles auprès d’enfants de moins de 13 ans.</li>
+      <li><strong>Publicité orientée enfants :</strong> Nous utilisons le traitement orienté enfants d’AdMob (pas d’annonces personnalisées), la classification de contenu G et uniquement des SDK publicitaires certifiés Google Play Families.</li>
+      <li><strong>Contrôle parental :</strong> Les parents peuvent désinstaller l’App à tout moment. Il n’existe pas de compte à supprimer.</li>
+    </ol>
+    <p>Si vous êtes parent ou tuteur et pensez que votre enfant nous a transmis des informations personnelles, contactez-nous.</p>
+
+    <h2>Utilisation des informations</h2>
+    <p><strong>Données locales :</strong> Uniquement pour le jeu, la progression et vos préférences. <strong>Données publicitaires :</strong> Traitées par Google AdMob comme décrit ci-dessus. Nous n’utilisons pas ces données nous-mêmes.</p>
+
+    <h2>Partage des données</h2>
+    <p>Nous ne vendons, ne louons ni n’échangeons les données des utilisateurs. Le seul tiers susceptible de recevoir des données via notre App est Google (via AdMob), selon sa politique de confidentialité.</p>
+
+    <h2>Conservation des données</h2>
+    <p><strong>Données locales :</strong> Conservées sur votre appareil jusqu’à la désinstallation de l’App ou l’effacement de ses données. <strong>Données liées aux annonces :</strong> Régies par les pratiques de conservation de Google.</p>
+
+    <h2>Sécurité des données</h2>
+    <p>Nous appliquons des mesures de sécurité adaptées aux données que nous traitons. Les données locales restent sur votre appareil. Nous ne transmettons pas de données personnelles ou sensibles vers nos propres serveurs.</p>
+
+    <h2>Vos droits</h2>
+    <p>Selon votre lieu de résidence, vous pouvez disposer de droits tels que : l’accès aux données ; la suppression (désinstaller l’App et effacer ses données) ; le refus des annonces personnalisées via les réglages de l’appareil (notre App n’utilise pas d’annonces personnalisées dans les configurations orientées enfants).</p>
+
+    <h2>Modifications de cette politique</h2>
+    <p>Nous pouvons mettre à jour cette politique de confidentialité. Nous informerons les utilisateurs des changements importants en actualisant la date « Dernière mise à jour » et, lorsque c’est possible, par un avis dans l’App ou une mise à jour de la fiche du store.</p>
+
+    <h2>Contact</h2>
+    <p>Pour toute question sur cette politique ou nos pratiques en matière de confidentialité :</p>
+    <p><strong>E-mail :</strong> velhorg@hotmail.com<br>
+    <strong>Développeur / société :</strong> LLabs Corp</p>
+    <p><em>Cette politique de confidentialité s’applique à l’application One Tap Dodge sur Android et iOS.</em></p>
+  </div>
+
   <div id="content-pt" class="lang-content">
     <h1>Política de Privacidade do One Tap Dodge</h1>
     <p class="meta"><strong>Última atualização:</strong> 23 de fevereiro de 2026</p>
@@ -257,17 +320,18 @@
   <p style="margin-top: 2rem;"><a href="https://leonardogbr.github.io/support/onetapdodge/" id="support-link">Support & FAQ</a></p>
 
   <script>
-    var SUPPORTED_LANGS = ['en', 'es', 'pt'];
+    var SUPPORTED_LANGS = ['en', 'es', 'fr', 'pt'];
     var DEFAULT_LANG = 'en';
+    var HTML_LANG = { en: 'en', es: 'es', fr: 'fr', pt: 'pt' };
 
     function getLangFromQuery() {
       var params = new URLSearchParams(window.location.search);
-      var lang = params.get('lang');
-      return lang && SUPPORTED_LANGS.includes(lang) ? lang : DEFAULT_LANG;
+      var lang = (params.get('lang') || '').toLowerCase();
+      return SUPPORTED_LANGS.includes(lang) ? lang : DEFAULT_LANG;
     }
 
     var SUPPORT_LINK_BASE = 'https://leonardogbr.github.io/support/onetapdodge/';
-    var SUPPORT_LINK_TEXT = { en: 'Support & FAQ', es: 'Soporte y FAQ', pt: 'Suporte e FAQ' };
+    var SUPPORT_LINK_TEXT = { en: 'Support & FAQ', es: 'Soporte y FAQ', fr: 'Assistance et FAQ', pt: 'Suporte e FAQ' };
 
     function showLang(lang) {
       if (!SUPPORTED_LANGS.includes(lang)) return;
@@ -277,7 +341,7 @@
       var btn = document.getElementById('btn-' + lang);
       if (content) content.classList.add('active');
       if (btn) btn.classList.add('active');
-      document.documentElement.lang = lang === 'en' ? 'en' : lang === 'es' ? 'es' : 'pt';
+      document.documentElement.lang = HTML_LANG[lang] || 'en';
       var url = new URL(window.location.href);
       url.searchParams.set('lang', lang);
       window.history.replaceState({}, '', url.toString());

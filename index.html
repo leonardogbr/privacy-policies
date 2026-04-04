@@ -55,14 +55,14 @@
   <p id="subtitle">Select an app to view its privacy policy.</p>
   <ul class="app-list">
     <li><a href="./onetapdodge/" id="link-onetapdodge">One Tap Dodge</a></li>
+    <li><a href="./zentictactoe/">Zen Tic-Tac-Toe</a></li>
   </ul>
   <script>
     (function () {
       var params = new URLSearchParams(window.location.search);
-      var lang = params.get('lang');
-      var supported = ['en', 'es', 'pt'];
+      var lang = (params.get('lang') || '').toLowerCase();
+      var supported = ['en', 'es', 'fr', 'pt'];
       if (lang && supported.includes(lang)) {
-        var base = window.location.pathname.replace(/\/$/, '') || '/';
         document.querySelectorAll('.app-list a').forEach(function (a) {
           var href = a.getAttribute('href');
           a.href = href + (href.indexOf('?') >= 0 ? '&' : '?') + 'lang=' + lang;
@@ -70,6 +70,7 @@
         var i18n = {
           en: { title: 'Privacy Policies', subtitle: 'Select an app to view its privacy policy.' },
           es: { title: 'Políticas de Privacidad', subtitle: 'Selecciona una aplicación para ver su política de privacidad.' },
+          fr: { title: 'Politiques de confidentialité', subtitle: 'Sélectionnez une application pour consulter sa politique de confidentialité.' },
           pt: { title: 'Políticas de Privacidade', subtitle: 'Selecione um aplicativo para ver sua política de privacidade.' }
         };
         var t = i18n[lang];

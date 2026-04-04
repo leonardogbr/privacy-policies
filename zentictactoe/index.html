@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - Zen Tic-Tac-Toe</title>
+  <style>
+    :root {
+      --bg: #0f1419;
+      --text: #e6edf3;
+      --muted: #8b949e;
+      --accent: #58a6ff;
+      --border: #30363d;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.6;
+      color: var(--text);
+      background: var(--bg);
+      margin: 0;
+      padding: 1.5rem;
+      max-width: 720px;
+      margin-inline: auto;
+    }
+    h1 { font-size: 1.75rem; margin-top: 0; }
+    h2 { font-size: 1.2rem; margin-top: 2rem; color: var(--text); }
+    h3 { font-size: 1rem; margin-top: 1.5rem; color: var(--text); }
+    p, li { color: var(--muted); }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .lang-tabs { margin-bottom: 1.5rem; flex-wrap: wrap; display: flex; gap: 0.5rem; }
+    .lang-tabs button {
+      background: var(--border);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      border-radius: 6px;
+    }
+    .lang-tabs button.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+    .lang-content { display: none; }
+    .lang-content.active { display: block; }
+    .meta { color: var(--muted); font-size: 0.9rem; margin-bottom: 1.5rem; }
+    .back-link { display: inline-block; margin-bottom: 1rem; font-size: 0.9rem; }
+    ul { padding-left: 1.25rem; }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #ffffff;
+        --text: #1f2328;
+        --muted: #656d76;
+        --accent: #0969da;
+        --border: #d0d7de;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="../" id="back-link" class="back-link">← All apps</a>
+
+  <div class="lang-tabs">
+    <button id="btn-en" class="active" onclick="showLang('en')">English</button>
+    <button id="btn-es" onclick="showLang('es')">Español</button>
+    <button id="btn-fr" onclick="showLang('fr')">Français</button>
+    <button id="btn-pt" onclick="showLang('pt')">Português</button>
+  </div>
+
+  <div id="content-en" class="lang-content active">
+    <h1>Privacy Policy for Zen Tic-Tac-Toe</h1>
+    <p class="meta"><strong>Last updated:</strong> April 4, 2026</p>
+
+    <h2>Introduction</h2>
+    <p>LLabs Corp ("we", "our", or "us") operates the Zen Tic-Tac-Toe mobile application (the "App"). This Privacy Policy explains how we collect, use, and protect information when you use our App, including in connection with Google Play's Families Policy and children's privacy requirements.</p>
+    <p>Our App is designed to be appropriate for all ages, including children under 13. We are committed to protecting the privacy of all users, especially children, in compliance with the U.S. Children's Online Privacy Protection Act (COPPA), the EU General Data Protection Regulation (GDPR), and Google Play's Families Policy.</p>
+
+    <h2>Information We Collect</h2>
+
+    <h3>Data Stored Locally on Your Device</h3>
+    <p>The App stores the following data <strong>only on your device</strong> (using Hive, a local database). This data is never sent to our servers or any third party by us:</p>
+    <ul>
+      <li><strong>Profile and progress:</strong> Optional display name you choose, level and experience, in-game currency, selected skin, counters related to ad frequency and rewarded-ad limits, sound and vibration preferences, theme, and language</li>
+      <li><strong>Match history:</strong> Past games (mode, result, board state, date) kept locally for your reference</li>
+      <li><strong>Skins:</strong> Which visual themes are unlocked and which is equipped</li>
+      <li><strong>Achievements:</strong> Unlock and progress state</li>
+    </ul>
+    <p>This local data is used solely to provide the game experience and personalize your settings. We do not have access to this data.</p>
+
+    <h3>Network connectivity</h3>
+    <p>The App may check network connectivity (for example before showing ads). This does not send personal identification data to our servers.</p>
+
+    <h3>Data Collected by Third Parties (Advertising)</h3>
+    <p>Our App displays advertisements through <strong>Google AdMob</strong>. When ads are shown:</p>
+    <ul>
+      <li><strong>Google AdMob</strong> may collect certain technical data (such as device type, OS version, and ad interaction data) to serve and measure ads. For apps targeting children, we configure AdMob to: not use interest-based advertising or remarketing; not transmit the Android Advertising ID (AAID) for child-directed ad requests; show only age-appropriate ads (content rating G – General audiences).</li>
+      <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a> and <a href="https://support.google.com/admob/answer/6223431" target="_blank" rel="noopener">AdMob – Child-directed treatment</a> govern AdMob's data practices.</li>
+    </ul>
+    <p>We do not control what data AdMob collects. We encourage you to review Google's policies.</p>
+
+    <h3>Data We Do NOT Collect</h3>
+    <p>We do <strong>not</strong> collect on our servers: email, phone number, or account credentials (the App has no online user accounts or login); location data; contacts, photos, or other personal files; any data that directly identifies a child. An optional nickname you enter stays on your device only.</p>
+
+    <h2>Children's Privacy (COPPA Compliance)</h2>
+    <p>Our App is designed for general audiences, including children under 13. We take children's privacy seriously:</p>
+    <ol>
+      <li><strong>No personal data from children:</strong> We do not knowingly collect personal information from children under 13.</li>
+      <li><strong>Child-directed advertising:</strong> We use AdMob's child-directed treatment (no personalized ads), content rating G, and only Google Play Families self-certified ads SDKs.</li>
+      <li><strong>Parental control:</strong> Parents can uninstall the App at any time. There is no account to delete.</li>
+    </ol>
+    <p>If you are a parent or guardian and believe your child has provided us with personal information, please contact us.</p>
+
+    <h2>How We Use Information</h2>
+    <p><strong>Local data:</strong> Used only to provide gameplay, maintain progress, and remember your preferences. <strong>Advertising data:</strong> Handled by Google AdMob as described above. We do not use this data ourselves.</p>
+
+    <h2>Data Sharing</h2>
+    <p>We do not sell, rent, or trade user data. The only third party that may receive data through our App is Google (via AdMob), as described in their privacy policy.</p>
+
+    <h2>Data Retention</h2>
+    <p><strong>Local data:</strong> Stored on your device until you uninstall the App or clear the App's data. <strong>Ad-related data:</strong> Governed by Google's retention practices.</p>
+
+    <h2>Data Security</h2>
+    <p>We use standard security measures appropriate for the data we handle. Local data remains on your device. We do not transmit personal or sensitive user data to our own servers.</p>
+
+    <h2>Your Rights</h2>
+    <p>Depending on your location, you may have rights such as: access to data we hold; deletion (uninstall the App and clear its data); opt-out of personalized ads via your device settings (our App does not use personalized ads for child-directed configurations).</p>
+
+    <h2>Changes to This Privacy Policy</h2>
+    <p>We may update this Privacy Policy from time to time. We will notify users of material changes by updating the "Last updated" date and, when possible, through an in-App notice or store listing update.</p>
+
+    <h2>Contact Us</h2>
+    <p>If you have questions about this Privacy Policy or our privacy practices, please contact us at:</p>
+    <p><strong>Email:</strong> velhorg@hotmail.com<br>
+    <strong>Developer/Company:</strong> LLabs Corp</p>
+    <p><em>This Privacy Policy applies to the Zen Tic-Tac-Toe app on Android and iOS.</em></p>
+  </div>
+
+  <div id="content-es" class="lang-content">
+    <h1>Política de Privacidad de Zen Tic-Tac-Toe</h1>
+    <p class="meta"><strong>Última actualización:</strong> 4 de abril de 2026</p>
+
+    <h2>Introducción</h2>
+    <p>LLabs Corp ("nosotros", "nuestro" o "nos") opera la aplicación móvil Zen Tic-Tac-Toe (la "App"). Esta Política de Privacidad explica cómo recopilamos, usamos y protegemos la información cuando utilizas nuestra App, incluyendo en relación con la Política de Familias de Google Play y los requisitos de privacidad infantil.</p>
+    <p>Nuestra App está diseñada para ser apropiada para todas las edades, incluidos niños menores de 13 años. Estamos comprometidos con la protección de la privacidad de todos los usuarios, especialmente de los niños, en cumplimiento de la COPPA (EE.UU.), el GDPR y la Política de Familias de Google Play.</p>
+
+    <h2>Información que Recopilamos</h2>
+
+    <h3>Datos Almacenados Localmente en Tu Dispositivo</h3>
+    <p>La App almacena los siguientes datos <strong>solo en tu dispositivo</strong> (usando Hive, una base de datos local). Estos datos nunca los enviamos nosotros a nuestros servidores ni a terceros:</p>
+    <ul>
+      <li><strong>Perfil y progreso:</strong> Nombre para mostrar opcional que elijas, nivel y experiencia, moneda del juego, skin seleccionada, contadores relacionados con la frecuencia de anuncios y límites de anuncios recompensados, preferencias de sonido y vibración, tema e idioma</li>
+      <li><strong>Historial de partidas:</strong> Partidas anteriores (modo, resultado, estado del tablero, fecha) guardadas solo en el dispositivo</li>
+      <li><strong>Skins:</strong> Qué temas visuales están desbloqueados y cuál está equipado</li>
+      <li><strong>Logros:</strong> Estado de desbloqueo y progreso</li>
+    </ul>
+    <p>Estos datos locales se utilizan únicamente para la experiencia de juego y tus preferencias. No tenemos acceso a ellos.</p>
+
+    <h3>Conectividad de red</h3>
+    <p>La App puede comprobar la conectividad de red (por ejemplo antes de mostrar anuncios). Esto no envía datos de identificación personal a nuestros servidores.</p>
+
+    <h3>Datos Recopilados por Terceros (Publicidad)</h3>
+    <p>Nuestra App muestra anuncios a través de <strong>Google AdMob</strong>. Cuando se muestran anuncios:</p>
+    <ul>
+      <li><strong>Google AdMob</strong> puede recopilar ciertos datos técnicos para servir y medir anuncios. Para aplicaciones dirigidas a niños, configuramos AdMob para: no usar publicidad basada en intereses ni remarketing; no transmitir el AAID en solicitudes dirigidas a niños; mostrar solo anuncios apropiados para la edad (clasificación G).</li>
+      <li>La <a href="https://policies.google.com/privacy?hl=es" target="_blank" rel="noopener">Política de Privacidad de Google</a> y el <a href="https://support.google.com/admob/answer/6223431" target="_blank" rel="noopener">AdMob – Tratamiento dirigido a niños</a> rigen las prácticas de AdMob.</li>
+    </ul>
+    <p>No controlamos qué datos recopila AdMob. Te animamos a revisar las políticas de Google.</p>
+
+    <h3>Datos que NO Recopilamos</h3>
+    <p><strong>No</strong> recopilamos en nuestros servidores: correo electrónico, teléfono ni credenciales de cuenta (la App no tiene cuentas en línea ni inicio de sesión); datos de ubicación; contactos, fotos u otros archivos personales; datos que identifiquen directamente a un niño. Un apodo opcional que introduzcas permanece solo en tu dispositivo.</p>
+
+    <h2>Privacidad de los Niños (COPPA)</h2>
+    <p>Nuestra App está diseñada para el público en general, incluidos niños menores de 13 años:</p>
+    <ol>
+      <li><strong>Sin datos personales de niños:</strong> No recopilamos intencionalmente información personal de menores de 13 años.</li>
+      <li><strong>Publicidad dirigida a niños:</strong> Tratamiento dirigido a niños de AdMob (sin anuncios personalizados), clasificación G y solo SDKs certificados Google Play Families.</li>
+      <li><strong>Control parental:</strong> Los padres pueden desinstalar la App en cualquier momento. No hay cuenta que eliminar.</li>
+    </ol>
+    <p>Si eres padre o tutor y crees que tu hijo nos ha proporcionado información personal, contáctanos.</p>
+
+    <h2>Cómo Usamos la Información</h2>
+    <p><strong>Datos locales:</strong> Solo para el juego, el progreso y tus preferencias. <strong>Datos de publicidad:</strong> Gestionados por Google AdMob. Nosotros no los utilizamos.</p>
+
+    <h2>Compartir Datos</h2>
+    <p>No vendemos, alquilamos ni intercambiamos datos de usuarios. El único tercero que puede recibir datos a través de nuestra App es Google (vía AdMob).</p>
+
+    <h2>Retención de Datos</h2>
+    <p><strong>Datos locales:</strong> En tu dispositivo hasta que desinstales la App o borres sus datos. <strong>Datos de anuncios:</strong> Según las prácticas de Google.</p>
+
+    <h2>Seguridad de los Datos</h2>
+    <p>Medidas de seguridad adecuadas. Los datos locales permanecen en tu dispositivo. No transmitimos datos personales o sensibles a nuestros servidores.</p>
+
+    <h2>Tus Derechos</h2>
+    <p>Según tu ubicación: acceso, eliminación (desinstalar y borrar datos), exclusión de anuncios personalizados en el dispositivo (no usamos anuncios personalizados en configuraciones dirigidas a niños).</p>
+
+    <h2>Cambios en esta Política</h2>
+    <p>Podemos actualizar esta política. Notificaremos cambios materiales actualizando la fecha y, cuando sea posible, con un aviso en la App o en la tienda.</p>
+
+    <h2>Contáctanos</h2>
+    <p>Preguntas sobre esta política o nuestras prácticas:</p>
+    <p><strong>Correo electrónico:</strong> velhorg@hotmail.com<br>
+    <strong>Desarrollador/Empresa:</strong> LLabs Corp</p>
+    <p><em>Esta política aplica a Zen Tic-Tac-Toe en Android e iOS.</em></p>
+  </div>
+
+  <div id="content-fr" class="lang-content">
+    <h1>Politique de confidentialité – Zen Tic-Tac-Toe</h1>
+    <p class="meta"><strong>Dernière mise à jour :</strong> 4 avril 2026</p>
+
+    <h2>Introduction</h2>
+    <p>LLabs Corp (« nous », « notre » ou « nos ») exploite l’application mobile Zen Tic-Tac-Toe (l’« App »). La présente politique explique comment nous collectons, utilisons et protégeons les informations lorsque vous utilisez notre App, notamment dans le cadre de la politique Familles de Google Play et de la protection des enfants.</p>
+    <p>Notre App convient à tous les âges, y compris aux moins de 13 ans. Nous nous engageons à protéger la vie privée de tous, en particulier des enfants, conformément au COPPA (États-Unis), au RGPD (UE) et à la politique Familles de Google Play.</p>
+
+    <h2>Informations que nous collectons</h2>
+
+    <h3>Données stockées localement sur votre appareil</h3>
+    <p>L’App stocke les données suivantes <strong>uniquement sur votre appareil</strong> (via Hive, une base locale). Nous ne les envoyons pas à nos serveurs ni à des tiers :</p>
+    <ul>
+      <li><strong>Profil et progression :</strong> Pseudonyme facultatif, niveau et expérience, monnaie virtuelle, skin sélectionnée, compteurs liés à la fréquence des annonces et aux limites d’annonces récompensées, préférences son et vibration, thème et langue</li>
+      <li><strong>Historique des parties :</strong> Parties passées (mode, résultat, état du plateau, date) conservées localement</li>
+      <li><strong>Skins :</strong> Thèmes débloqués et skin équipée</li>
+      <li><strong>Succès :</strong> État de déblocage et de progression</li>
+    </ul>
+    <p>Ces données servent uniquement au jeu et à vos réglages. Nous n’y avons pas accès.</p>
+
+    <h3>Connectivité réseau</h3>
+    <p>L’App peut vérifier la connectivité (par ex. avant d’afficher des annonces). Cela n’envoie pas d’identifiants personnels à nos serveurs.</p>
+
+    <h3>Données collectées par des tiers (publicité)</h3>
+    <p>Des annonces sont diffusées via <strong>Google AdMob</strong> :</p>
+    <ul>
+      <li><strong>Google AdMob</strong> peut collecter des données techniques pour diffuser et mesurer les annonces. Pour les apps orientées enfants, nous configurons AdMob pour : pas de pub basée sur les centres d’intérêt ni remarketing ; pas de transmission de l’AAID pour les requêtes orientées enfants ; annonces adaptées à l’âge (classement G).</li>
+      <li>La <a href="https://policies.google.com/privacy?hl=fr" target="_blank" rel="noopener">politique de confidentialité de Google</a> et <a href="https://support.google.com/admob/answer/6223431" target="_blank" rel="noopener">AdMob – Enfants</a> décrivent les pratiques d’AdMob.</li>
+    </ul>
+    <p>Nous ne contrôlons pas les données qu’AdMob collecte. Consultez les politiques de Google.</p>
+
+    <h3>Données que nous ne collectons pas</h3>
+    <p>Nous ne collectons <strong>pas</strong> sur nos serveurs : e-mail, téléphone, identifiants de compte (pas de compte en ligne ni connexion) ; localisation ; contacts, photos ou fichiers personnels ; données identifiant directement un enfant. Un surnom facultatif reste sur l’appareil.</p>
+
+    <h2>Vie privée des enfants (COPPA)</h2>
+    <ol>
+      <li><strong>Pas de données personnelles d’enfants :</strong> Nous ne collectons pas sciemment d’informations auprès des moins de 13 ans.</li>
+      <li><strong>Publicité :</strong> Traitement orienté enfants d’AdMob, classement G, SDK certifiés Google Play Families.</li>
+      <li><strong>Contrôle parental :</strong> Désinstallation possible à tout moment. Pas de compte à supprimer.</li>
+    </ol>
+    <p>Parents ou tuteurs : contactez-nous si vous pensez qu’un enfant nous a transmis des données personnelles.</p>
+
+    <h2>Utilisation des informations</h2>
+    <p><strong>Données locales :</strong> Jeu, progression, préférences. <strong>Publicité :</strong> Google AdMob. Nous n’utilisons pas ces données nous-mêmes.</p>
+
+    <h2>Partage</h2>
+    <p>Pas de vente, location ou échange des données. Seul Google (via AdMob) peut recevoir des données selon sa politique.</p>
+
+    <h2>Conservation</h2>
+    <p><strong>Locales :</strong> Jusqu’à désinstallation ou effacement des données de l’App. <strong>Annonces :</strong> Selon Google.</p>
+
+    <h2>Sécurité</h2>
+    <p>Mesures adaptées. Données locales sur l’appareil. Pas de transmission vers nos serveurs de données personnelles sensibles.</p>
+
+    <h2>Vos droits</h2>
+    <p>Selon votre région : accès, suppression, refus des annonces personnalisées (réglages appareil ; pas d’annonces personnalisées en config. enfants).</p>
+
+    <h2>Modifications</h2>
+    <p>Mises à jour possibles ; date « Dernière mise à jour » et avis dans l’App ou sur le store lorsque c’est possible.</p>
+
+    <h2>Contact</h2>
+    <p><strong>E-mail :</strong> velhorg@hotmail.com<br>
+    <strong>Développeur / société :</strong> LLabs Corp</p>
+    <p><em>Cette politique s’applique à Zen Tic-Tac-Toe sur Android et iOS.</em></p>
+  </div>
+
+  <div id="content-pt" class="lang-content">
+    <h1>Política de Privacidade do Zen Tic-Tac-Toe</h1>
+    <p class="meta"><strong>Última atualização:</strong> 4 de abril de 2026</p>
+
+    <h2>Introdução</h2>
+    <p>LLabs Corp ("nós", "nosso" ou "nos") opera o aplicativo móvel Zen Tic-Tac-Toe (o "Aplicativo"). Esta Política de Privacidade explica como coletamos, usamos e protegemos informações quando você usa nosso Aplicativo, em conformidade com a Política de Famílias do Google Play e requisitos de privacidade infantil.</p>
+    <p>Nosso Aplicativo é adequado a todas as idades, incluindo crianças menores de 13 anos, em linha com o COPPA, LGPD/GDPR e a Política de Famílias do Google Play.</p>
+
+    <h2>Informações que Coletamos</h2>
+
+    <h3>Dados Armazenados Localmente no Seu Dispositivo</h3>
+    <p>O Aplicativo armazena os seguintes dados <strong>apenas no seu dispositivo</strong> (usando Hive, banco de dados local). Nós não os enviamos aos nossos servidores nem a terceiros:</p>
+    <ul>
+      <li><strong>Perfil e progresso:</strong> Nome de exibição opcional que você escolher, nível e experiência, moeda do jogo, skin selecionada, contadores relacionados à frequência de anúncios e limites de anúncios recompensados, preferências de som e vibração, tema e idioma</li>
+      <li><strong>Histórico de partidas:</strong> Partidas anteriores (modo, resultado, estado do tabuleiro, data) guardadas só no dispositivo</li>
+      <li><strong>Skins:</strong> Temas visuais desbloqueados e qual está equipada</li>
+      <li><strong>Conquistas:</strong> Estado de desbloqueio e progresso</li>
+    </ul>
+    <p>Esses dados locais servem apenas à experiência do jogo e às suas preferências. Não temos acesso a eles.</p>
+
+    <h3>Conectividade de rede</h3>
+    <p>O Aplicativo pode verificar a conectividade (por exemplo antes de exibir anúncios). Isso não envia dados de identificação pessoal aos nossos servidores.</p>
+
+    <h3>Dados Coletados por Terceiros (Publicidade)</h3>
+    <p>O Aplicativo exibe anúncios pelo <strong>Google AdMob</strong>:</p>
+    <ul>
+      <li>O <strong>Google AdMob</strong> pode coletar dados técnicos. Para apps direcionados a crianças, configuramos o AdMob para: não usar publicidade baseada em interesses ou remarketing; não transmitir o AAID em solicitações direcionadas a crianças; exibir apenas anúncios adequados à idade (classificação G).</li>
+      <li>As <a href="https://policies.google.com/privacy?hl=pt-BR" target="_blank" rel="noopener">políticas de privacidade do Google</a> e o <a href="https://support.google.com/admob/answer/6223431" target="_blank" rel="noopener">AdMob – Tratamento direcionado a crianças</a> regem o AdMob.</li>
+    </ul>
+    <p>Não controlamos o que o AdMob coleta. Recomendamos revisar as políticas do Google.</p>
+
+    <h3>Dados que NÃO Coletamos</h3>
+    <p><strong>Não</strong> coletamos em nossos servidores: e-mail, telefone ou credenciais de conta (sem contas online ou login); localização; contatos, fotos ou arquivos pessoais; dados que identifiquem diretamente uma criança. Um apelido opcional permanece só no dispositivo.</p>
+
+    <h2>Privacidade Infantil (COPPA)</h2>
+    <ol>
+      <li><strong>Sem dados pessoais de crianças:</strong> Não coletamos intencionalmente informações de menores de 13 anos.</li>
+      <li><strong>Publicidade:</strong> Tratamento direcionado a crianças do AdMob, classificação G, SDKs certificados Google Play Families.</li>
+      <li><strong>Controle dos pais:</strong> Desinstalação a qualquer momento. Não há conta para excluir.</li>
+    </ol>
+    <p>Se você é pai ou responsável e acredita que seu filho nos forneceu dados pessoais, entre em contato.</p>
+
+    <h2>Como Usamos as Informações</h2>
+    <p><strong>Dados locais:</strong> Jogo, progresso e preferências. <strong>Publicidade:</strong> Google AdMob. Não usamos esses dados nós mesmos.</p>
+
+    <h2>Compartilhamento</h2>
+    <p>Não vendemos, alugamos nem trocamos dados. O único terceiro que pode receber dados é o Google (via AdMob).</p>
+
+    <h2>Retenção</h2>
+    <p><strong>Locais:</strong> Até desinstalar ou limpar os dados do App. <strong>Anúncios:</strong> Conforme o Google.</p>
+
+    <h2>Segurança</h2>
+    <p>Medidas adequadas. Dados locais no dispositivo. Não transmitimos dados pessoais sensíveis aos nossos servidores.</p>
+
+    <h2>Seus Direitos</h2>
+    <p>Conforme sua região: acesso, exclusão, opt-out de anúncios personalizados no dispositivo (sem anúncios personalizados em config. para crianças).</p>
+
+    <h2>Alterações</h2>
+    <p>Podemos atualizar esta política; data "Última atualização" e aviso no App ou na loja quando possível.</p>
+
+    <h2>Contato</h2>
+    <p><strong>E-mail:</strong> velhorg@hotmail.com<br>
+    <strong>Desenvolvedor/Empresa:</strong> LLabs Corp</p>
+    <p><em>Esta política aplica-se ao Zen Tic-Tac-Toe no Android e iOS.</em></p>
+  </div>
+
+  <script>
+    var SUPPORTED_LANGS = ['en', 'es', 'fr', 'pt'];
+    var DEFAULT_LANG = 'en';
+    var HTML_LANG = { en: 'en', es: 'es', fr: 'fr', pt: 'pt' };
+
+    function getLangFromQuery() {
+      var params = new URLSearchParams(window.location.search);
+      var lang = (params.get('lang') || '').toLowerCase();
+      return SUPPORTED_LANGS.includes(lang) ? lang : DEFAULT_LANG;
+    }
+
+    function showLang(lang) {
+      if (!SUPPORTED_LANGS.includes(lang)) return;
+      document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.lang-tabs button').forEach(btn => btn.classList.remove('active'));
+      var content = document.getElementById('content-' + lang);
+      var btn = document.getElementById('btn-' + lang);
+      if (content) content.classList.add('active');
+      if (btn) btn.classList.add('active');
+      document.documentElement.lang = HTML_LANG[lang] || 'en';
+      var url = new URL(window.location.href);
+      url.searchParams.set('lang', lang);
+      window.history.replaceState({}, '', url.toString());
+    }
+
+    (function init() {
+      var lang = getLangFromQuery();
+      showLang(lang);
+      var back = document.getElementById('back-link');
+      if (back) back.href = back.href + (back.href.indexOf('?') >= 0 ? '&' : '?') + 'lang=' + lang;
+    })();
+  </script>
+</body>
+</html>
